@@ -12,7 +12,8 @@ class LoginViewController: MainViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = Colors.mainBackgroundColor
+        setupUI()
+
     }
     
     @IBAction func loginSegmentedControlChanged(_ sender: UISegmentedControl) {
@@ -22,4 +23,9 @@ class LoginViewController: MainViewController {
     @IBAction func submitButtonTapped(_ sender: UIButton) {
         proceedToHomeView()
     }
+    
+    private func setupUI() {
+        view.backgroundColor = Colors.mainBackgroundColor
+    }
+
 }
