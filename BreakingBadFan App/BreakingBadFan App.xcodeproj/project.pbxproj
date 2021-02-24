@@ -16,6 +16,8 @@
 		3ADD69EC25E6C9530018344C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3ADD69EB25E6C9530018344C /* Localizable.strings */; };
 		3ADD69F025E6C9A50018344C /* Localizations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADD69EF25E6C9A50018344C /* Localizations.swift */; };
 		3ADD69F425E6CA530018344C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADD69F325E6CA530018344C /* Colors.swift */; };
+		3ADD6A0125E6EBF10018344C /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADD6A0025E6EBF10018344C /* CustomButton.swift */; };
+		3ADD6A0625E6ED400018344C /* CustomButtonDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADD6A0525E6ED400018344C /* CustomButtonDTO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		3ADD69EB25E6C9530018344C /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		3ADD69EF25E6C9A50018344C /* Localizations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizations.swift; sourceTree = "<group>"; };
 		3ADD69F325E6CA530018344C /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		3ADD6A0025E6EBF10018344C /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		3ADD6A0525E6ED400018344C /* CustomButtonDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonDTO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +116,7 @@
 		3ADD69F225E6CA3D0018344C /* UIElements */ = {
 			isa = PBXGroup;
 			children = (
+				3ADD69FF25E6EBA90018344C /* Button */,
 				3ADD69F325E6CA530018344C /* Colors.swift */,
 			);
 			path = UIElements;
@@ -122,6 +127,15 @@
 			children = (
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3ADD69FF25E6EBA90018344C /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				3ADD6A0025E6EBF10018344C /* CustomButton.swift */,
+				3ADD6A0525E6ED400018344C /* CustomButtonDTO.swift */,
+			);
+			path = Button;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,7 +210,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3ADD69D725E6C71D0018344C /* LoginViewController.swift in Sources */,
+				3ADD6A0625E6ED400018344C /* CustomButtonDTO.swift in Sources */,
 				3ADD69F425E6CA530018344C /* Colors.swift in Sources */,
+				3ADD6A0125E6EBF10018344C /* CustomButton.swift in Sources */,
 				3ADD69D325E6C71D0018344C /* AppDelegate.swift in Sources */,
 				3ADD69F025E6C9A50018344C /* Localizations.swift in Sources */,
 				3ADD69D525E6C71D0018344C /* SceneDelegate.swift in Sources */,
