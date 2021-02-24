@@ -20,6 +20,11 @@
 		3ADD6A0625E6ED400018344C /* CustomButtonDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADD6A0525E6ED400018344C /* CustomButtonDTO.swift */; };
 		3ADD6A0925E6F79B0018344C /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ADD6A0825E6F79B0018344C /* Home.storyboard */; };
 		3ADD6A0C25E6F7E90018344C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADD6A0B25E6F7E90018344C /* HomeViewController.swift */; };
+		3ADD6A0F25E6FCBD0018344C /* Episodes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ADD6A0E25E6FCBD0018344C /* Episodes.storyboard */; };
+		3ADD6A1225E6FD3A0018344C /* EpisodesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADD6A1125E6FD3A0018344C /* EpisodesViewController.swift */; };
+		3ADD6A1525E6FF410018344C /* EpisodeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADD6A1425E6FF410018344C /* EpisodeDetailsViewController.swift */; };
+		3ADD6A1825E6FF580018344C /* CharacterDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADD6A1725E6FF580018344C /* CharacterDetailsViewController.swift */; };
+		3ADD6A1B25E7047E0018344C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADD6A1A25E7047E0018344C /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +43,11 @@
 		3ADD6A0525E6ED400018344C /* CustomButtonDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonDTO.swift; sourceTree = "<group>"; };
 		3ADD6A0825E6F79B0018344C /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		3ADD6A0B25E6F7E90018344C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		3ADD6A0E25E6FCBD0018344C /* Episodes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Episodes.storyboard; sourceTree = "<group>"; };
+		3ADD6A1125E6FD3A0018344C /* EpisodesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesViewController.swift; sourceTree = "<group>"; };
+		3ADD6A1425E6FF410018344C /* EpisodeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDetailsViewController.swift; sourceTree = "<group>"; };
+		3ADD6A1725E6FF580018344C /* CharacterDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsViewController.swift; sourceTree = "<group>"; };
+		3ADD6A1A25E7047E0018344C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,8 +97,12 @@
 		3ADD69E725E6C84C0018344C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				3ADD6A1A25E7047E0018344C /* MainViewController.swift */,
 				3ADD69D625E6C71D0018344C /* LoginViewController.swift */,
 				3ADD6A0B25E6F7E90018344C /* HomeViewController.swift */,
+				3ADD6A1125E6FD3A0018344C /* EpisodesViewController.swift */,
+				3ADD6A1425E6FF410018344C /* EpisodeDetailsViewController.swift */,
+				3ADD6A1725E6FF580018344C /* CharacterDetailsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -98,6 +112,7 @@
 			children = (
 				3ADD69D825E6C71D0018344C /* Login.storyboard */,
 				3ADD6A0825E6F79B0018344C /* Home.storyboard */,
+				3ADD6A0E25E6FCBD0018344C /* Episodes.storyboard */,
 			);
 			path = Storybards;
 			sourceTree = "<group>";
@@ -203,6 +218,7 @@
 			files = (
 				3ADD69DF25E6C7210018344C /* LaunchScreen.storyboard in Resources */,
 				3ADD6A0925E6F79B0018344C /* Home.storyboard in Resources */,
+				3ADD6A0F25E6FCBD0018344C /* Episodes.storyboard in Resources */,
 				3ADD69EC25E6C9530018344C /* Localizable.strings in Resources */,
 				3ADD69DC25E6C7210018344C /* Assets.xcassets in Resources */,
 				3ADD69DA25E6C71D0018344C /* Login.storyboard in Resources */,
@@ -219,6 +235,10 @@
 				3ADD69D725E6C71D0018344C /* LoginViewController.swift in Sources */,
 				3ADD6A0625E6ED400018344C /* CustomButtonDTO.swift in Sources */,
 				3ADD69F425E6CA530018344C /* Colors.swift in Sources */,
+				3ADD6A1B25E7047E0018344C /* MainViewController.swift in Sources */,
+				3ADD6A1525E6FF410018344C /* EpisodeDetailsViewController.swift in Sources */,
+				3ADD6A1825E6FF580018344C /* CharacterDetailsViewController.swift in Sources */,
+				3ADD6A1225E6FD3A0018344C /* EpisodesViewController.swift in Sources */,
 				3ADD6A0C25E6F7E90018344C /* HomeViewController.swift in Sources */,
 				3ADD6A0125E6EBF10018344C /* CustomButton.swift in Sources */,
 				3ADD69D325E6C71D0018344C /* AppDelegate.swift in Sources */,
