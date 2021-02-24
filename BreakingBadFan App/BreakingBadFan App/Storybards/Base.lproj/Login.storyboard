@@ -34,16 +34,22 @@
                                                     <constraint firstAttribute="height" constant="40" id="CKy-Lg-cbG"/>
                                                 </constraints>
                                                 <segments>
-                                                    <segment title="First"/>
-                                                    <segment title="Second"/>
+                                                    <segment title="LOGIN"/>
+                                                    <segment title="REGISTER"/>
                                                 </segments>
+                                                <connections>
+                                                    <action selector="loginSegmentedControlChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="cIh-fd-xHR"/>
+                                                </connections>
                                             </segmentedControl>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11M-nj-no4">
                                                 <rect key="frame" x="0.0" y="259" width="374" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="Wdg-dC-1ZL"/>
                                                 </constraints>
-                                                <state key="normal" title="Button"/>
+                                                <state key="normal" title="Submit"/>
+                                                <connections>
+                                                    <action selector="submitButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pq5-6l-J9q"/>
+                                                </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="c4E-HI-zmY">
                                                 <rect key="frame" x="20" y="60" width="334" height="179"/>
@@ -120,6 +126,14 @@
                             <constraint firstItem="Kvu-FG-kXV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="xnj-HT-7t2"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="appTitleLabel" destination="0iA-y9-VKn" id="Ily-Ms-xzk"/>
+                        <outlet property="confirmPasswordTextField" destination="9iw-a4-YEq" id="v6A-xu-y2d"/>
+                        <outlet property="loginSegmentedControl" destination="sRY-WK-D4l" id="cx4-Oy-oIz"/>
+                        <outlet property="passwordTextField" destination="huh-9h-5lL" id="NLk-Ca-etD"/>
+                        <outlet property="submitButton" destination="11M-nj-no4" id="1UI-OW-e5z"/>
+                        <outlet property="usernameTextField" destination="Yqh-VC-8NN" id="BUI-7m-Vvf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
