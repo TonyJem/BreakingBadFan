@@ -21,7 +21,7 @@ class MainViewController: UIViewController {
 
 extension MainViewController {
     
-    func proceedToQuizView() {
+    func proceedToHomeView() {
         modalPresentationStyle = .fullScreen
         present(HomeViewController, animated: true)
     }

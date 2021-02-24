@@ -11,7 +11,7 @@
         <!--Home View Controller-->
         <scene sceneID="XX0-GD-Yyc">
             <objects>
-                <viewController id="SAa-3R-7Ad" customClass="HomeViewController" customModule="BreakingBadFan_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="SAa-3R-7Ad" customClass="HomeViewController" customModule="BreakingBadFan_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Db-FD-epr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

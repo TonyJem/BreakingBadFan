@@ -27,6 +27,6 @@ class HomeViewController: MainViewController {
     }
     
     @IBAction func logoutButtonTapped(_ sender: UIButton) {
-        print("🟢 logoutButtonTapped")
+        dismiss(animated: true)
     }
 }

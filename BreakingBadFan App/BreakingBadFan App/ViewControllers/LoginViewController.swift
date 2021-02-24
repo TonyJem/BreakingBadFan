@@ -1,6 +1,6 @@
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: MainViewController {
     
     @IBOutlet private weak var appTitleLabel: UILabel!
     @IBOutlet weak var loginSegmentedControl: UISegmentedControl!
@@ -20,6 +20,6 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func submitButtonTapped(_ sender: UIButton) {
-        print("🟢 submitButtonTapped")
+        proceedToHomeView()
     }
 }
