@@ -3,11 +3,11 @@ import UIKit
 class LoginViewController: MainViewController {
     
     @IBOutlet private weak var appTitleLabel: UILabel!
-    @IBOutlet weak var loginSegmentedControl: UISegmentedControl!
-    @IBOutlet weak var usernameTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var confirmPasswordTextField: UITextField!
-    @IBOutlet weak var submitButton: UIButton!
+    @IBOutlet private weak var loginSegmentedControl: UISegmentedControl!
+    @IBOutlet private weak var usernameTextField: UITextField!
+    @IBOutlet private weak var passwordTextField: UITextField!
+    @IBOutlet private weak var confirmPasswordTextField: UITextField!
+    @IBOutlet private weak var submitButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,16 +16,21 @@ class LoginViewController: MainViewController {
 
     }
     
-    @IBAction func loginSegmentedControlChanged(_ sender: UISegmentedControl) {
+    @IBAction private func loginSegmentedControlChanged(_ sender: UISegmentedControl) {
         print("🟢 loginSegmentedControlChanged")
     }
     
-    @IBAction func submitButtonTapped(_ sender: UIButton) {
+    @IBAction private func submitButtonTapped(_ sender: UIButton) {
         proceedToHomeView()
     }
+    
+}
+
+// MARK: private methods
+private extension LoginViewController {
     
     private func setupUI() {
         view.backgroundColor = Colors.mainBackgroundColor
     }
-
+    
 }

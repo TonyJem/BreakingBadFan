@@ -2,7 +2,7 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-// MARK: - UIViewControllers
+// MARK: - Storyboards
     
     private lazy var HomeStoryboard: UIStoryboard = {
         UIStoryboard(name: "Home", bundle: nil)
