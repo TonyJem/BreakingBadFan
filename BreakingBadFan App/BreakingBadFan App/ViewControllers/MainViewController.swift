@@ -8,7 +8,6 @@ class MainViewController: UIViewController {
         UIStoryboard(name: "Home", bundle: nil)
     }()
     
-    
 // MARK: - UIViewControllers
     
     private var HomeViewController: UIViewController {

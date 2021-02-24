@@ -9,12 +9,6 @@ class LoginViewController: MainViewController {
     @IBOutlet private weak var confirmPasswordTextField: UITextField!
     @IBOutlet private weak var submitButton: UIButton!
     
-    private var isLoginModeActive = true {
-        didSet {
-            confirmPasswordTextField.isHidden = isLoginModeActive
-        }
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,12 +17,7 @@ class LoginViewController: MainViewController {
     }
     
     @IBAction private func loginSegmentedControlChanged(_ sender: UISegmentedControl) {
-        
-        if sender.selectedSegmentIndex == 0 {
-            isLoginModeActive = true
-        } else {
-            isLoginModeActive = false
-        }
+        confirmPasswordTextField.isHidden = sender.selectedSegmentIndex == 0
     }
     
     @IBAction private func submitButtonTapped(_ sender: UIButton) {
@@ -37,13 +26,13 @@ class LoginViewController: MainViewController {
     
 }
 
-// MARK: private methods
+// MARK: - private methods
 private extension LoginViewController {
     
     private func setupUI() {
         view.backgroundColor = Colors.mainBackgroundColor
-        isLoginModeActive = true
         loginSegmentedControl.selectedSegmentIndex = 0
+        confirmPasswordTextField.isHidden = true
     }
     
 }
