@@ -10,7 +10,7 @@
 		3ADD69D325E6C71D0018344C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADD69D225E6C71D0018344C /* AppDelegate.swift */; };
 		3ADD69D525E6C71D0018344C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADD69D425E6C71D0018344C /* SceneDelegate.swift */; };
 		3ADD69D725E6C71D0018344C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADD69D625E6C71D0018344C /* ViewController.swift */; };
-		3ADD69DA25E6C71D0018344C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ADD69D825E6C71D0018344C /* Main.storyboard */; };
+		3ADD69DA25E6C71D0018344C /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ADD69D825E6C71D0018344C /* Login.storyboard */; };
 		3ADD69DC25E6C7210018344C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3ADD69DB25E6C7210018344C /* Assets.xcassets */; };
 		3ADD69DF25E6C7210018344C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ADD69DD25E6C7210018344C /* LaunchScreen.storyboard */; };
 		3ADD69EC25E6C9530018344C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3ADD69EB25E6C9530018344C /* Localizable.strings */; };
@@ -23,7 +23,7 @@
 		3ADD69D225E6C71D0018344C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3ADD69D425E6C71D0018344C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3ADD69D625E6C71D0018344C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3ADD69D925E6C71D0018344C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3ADD69D925E6C71D0018344C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		3ADD69DB25E6C7210018344C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3ADD69DE25E6C7210018344C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3ADD69E025E6C7210018344C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -86,7 +86,7 @@
 		3ADD69E825E6C8640018344C /* Storybards */ = {
 			isa = PBXGroup;
 			children = (
-				3ADD69D825E6C71D0018344C /* Main.storyboard */,
+				3ADD69D825E6C71D0018344C /* Login.storyboard */,
 			);
 			path = Storybards;
 			sourceTree = "<group>";
@@ -176,7 +176,7 @@
 				3ADD69DF25E6C7210018344C /* LaunchScreen.storyboard in Resources */,
 				3ADD69EC25E6C9530018344C /* Localizable.strings in Resources */,
 				3ADD69DC25E6C7210018344C /* Assets.xcassets in Resources */,
-				3ADD69DA25E6C71D0018344C /* Main.storyboard in Resources */,
+				3ADD69DA25E6C71D0018344C /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,12 +198,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		3ADD69D825E6C71D0018344C /* Main.storyboard */ = {
+		3ADD69D825E6C71D0018344C /* Login.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				3ADD69D925E6C71D0018344C /* Base */,
 			);
-			name = Main.storyboard;
+			name = Login.storyboard;
 			sourceTree = "<group>";
 		};
 		3ADD69DD25E6C7210018344C /* LaunchScreen.storyboard */ = {
@@ -348,7 +348,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "lt.1011.BreakingBadFan-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -367,7 +367,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "lt.1011.BreakingBadFan-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
