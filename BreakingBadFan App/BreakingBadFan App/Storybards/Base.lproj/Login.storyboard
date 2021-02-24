@@ -52,7 +52,7 @@
                                                 </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="c4E-HI-zmY">
-                                                <rect key="frame" x="20" y="60" width="334" height="179"/>
+                                                <rect key="frame" x="20" y="69.5" width="334" height="160"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yqh-VC-8NN">
                                                         <rect key="frame" x="0.0" y="0.0" width="334" height="40"/>
@@ -63,7 +63,7 @@
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="huh-9h-5lL">
-                                                        <rect key="frame" x="0.0" y="69.5" width="334" height="40"/>
+                                                        <rect key="frame" x="0.0" y="60" width="334" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="FsZ-40-Rxz"/>
                                                         </constraints>
@@ -71,7 +71,7 @@
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9iw-a4-YEq">
-                                                        <rect key="frame" x="0.0" y="139" width="334" height="40"/>
+                                                        <rect key="frame" x="0.0" y="120" width="334" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="01I-Yx-YED"/>
                                                         </constraints>
@@ -102,7 +102,7 @@
                                             <constraint firstAttribute="trailing" secondItem="11M-nj-no4" secondAttribute="trailing" id="i5u-Yf-2Dj"/>
                                             <constraint firstItem="sRY-WK-D4l" firstAttribute="leading" secondItem="rnv-Zy-RaJ" secondAttribute="leading" id="ooQ-fB-mxl"/>
                                             <constraint firstAttribute="bottom" secondItem="11M-nj-no4" secondAttribute="bottom" id="q7m-dP-7fk"/>
-                                            <constraint firstItem="c4E-HI-zmY" firstAttribute="height" secondItem="rnv-Zy-RaJ" secondAttribute="height" multiplier="0.6" id="uEH-Tw-yyY"/>
+                                            <constraint firstItem="c4E-HI-zmY" firstAttribute="height" relation="lessThanOrEqual" secondItem="rnv-Zy-RaJ" secondAttribute="height" multiplier="0.6" id="uEH-Tw-yyY"/>
                                         </constraints>
                                     </view>
                                 </subviews>
