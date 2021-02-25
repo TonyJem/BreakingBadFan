@@ -1,12 +1,12 @@
 import Foundation
 
-struct User: Codable {
+struct Account: Codable {
     
-    let name: String
+    let username: String
     var password: String
     
-    init(name: String, password: String) {
-        self.name = name
+    init(username: String, password: String) {
+        self.username = username
         self.password = password
     }
     

@@ -28,6 +28,8 @@
 		3ADD6A2425E71BCE0018344C /* customTextFieldDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADD6A2325E71BCE0018344C /* customTextFieldDTO.swift */; };
 		3ADD6A2825E71C000018344C /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADD6A2725E71C000018344C /* CustomTextField.swift */; };
 		3ADD6A2C25E72D0A0018344C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADD6A2B25E72D0A0018344C /* User.swift */; };
+		3ADD6A3125E72E010018344C /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADD6A3025E72E010018344C /* UserDefaultsManager.swift */; };
+		3ADD6A3525E72FB00018344C /* SwiftKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADD6A3425E72FB00018344C /* SwiftKeychain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,8 @@
 		3ADD6A2325E71BCE0018344C /* customTextFieldDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customTextFieldDTO.swift; sourceTree = "<group>"; };
 		3ADD6A2725E71C000018344C /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		3ADD6A2B25E72D0A0018344C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		3ADD6A3025E72E010018344C /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		3ADD6A3425E72FB00018344C /* SwiftKeychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftKeychain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,7 @@
 				3ADD69E825E6C8640018344C /* Storybards */,
 				3ADD69E725E6C84C0018344C /* ViewControllers */,
 				3ADD6A2A25E72CEC0018344C /* Models */,
+				3ADD6A2F25E72DD50018344C /* Managers */,
 				3ADD69EE25E6C98D0018344C /* Helpers */,
 				3ADD69FA25E6D2380018344C /* Extensions */,
 				3ADD69E925E6C8D90018344C /* Resources */,
@@ -129,6 +134,7 @@
 			children = (
 				3ADD69DB25E6C7210018344C /* Assets.xcassets */,
 				3ADD69EB25E6C9530018344C /* Localizable.strings */,
+				3ADD6A3425E72FB00018344C /* SwiftKeychain.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -182,6 +188,14 @@
 				3ADD6A2B25E72D0A0018344C /* User.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		3ADD6A2F25E72DD50018344C /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				3ADD6A3025E72E010018344C /* UserDefaultsManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,10 +273,12 @@
 			files = (
 				3ADD6A2825E71C000018344C /* CustomTextField.swift in Sources */,
 				3ADD69D725E6C71D0018344C /* LoginViewController.swift in Sources */,
+				3ADD6A3525E72FB00018344C /* SwiftKeychain.swift in Sources */,
 				3ADD6A0625E6ED400018344C /* CustomButtonDTO.swift in Sources */,
 				3ADD6A2425E71BCE0018344C /* customTextFieldDTO.swift in Sources */,
 				3ADD69F425E6CA530018344C /* Colors.swift in Sources */,
 				3ADD6A1B25E7047E0018344C /* MainViewController.swift in Sources */,
+				3ADD6A3125E72E010018344C /* UserDefaultsManager.swift in Sources */,
 				3ADD6A1525E6FF410018344C /* EpisodeDetailsViewController.swift in Sources */,
 				3ADD6A1825E6FF580018344C /* CharacterDetailsViewController.swift in Sources */,
 				3ADD6A2C25E72D0A0018344C /* User.swift in Sources */,
