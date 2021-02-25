@@ -4,7 +4,7 @@ struct UserDefaultsManager {
     
     private enum UserDefaultsManagerKey {
         static let accounts = "Account"
-        static let currentUser = "CurrentUser"
+        static let currentAccount = "currentAccount"
     }
     
     private static var userDefaults: UserDefaults {
@@ -45,15 +45,15 @@ extension UserDefaultsManager {
         }
     }
     
-    static var currentUser: Account? {
+    static var currentAccount: Account? {
         get {
-            guard let currentUser = userDefaults.object(forKey: UserDefaultsManagerKey.currentUser) as? Data else {
+            guard let currentAccount = userDefaults.object(forKey: UserDefaultsManagerKey.currentAccount) as? Data else {
                 return nil
             }
-            return try? JSONDecoder().decode(Account.self, from: currentUser)
+            return try? JSONDecoder().decode(Account.self, from: currentAccount)
         } set {
-            let currentUser = try? JSONEncoder().encode(newValue)
-            userDefaults.set(currentUser, forKey: UserDefaultsManagerKey.currentUser)
+            let currentAccount = try? JSONEncoder().encode(newValue)
+            userDefaults.set(currentAccount, forKey: UserDefaultsManagerKey.currentAccount)
         }
     }
     

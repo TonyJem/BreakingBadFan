@@ -27,7 +27,7 @@
 		3ADD6A1B25E7047E0018344C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADD6A1A25E7047E0018344C /* MainViewController.swift */; };
 		3ADD6A2425E71BCE0018344C /* customTextFieldDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADD6A2325E71BCE0018344C /* customTextFieldDTO.swift */; };
 		3ADD6A2825E71C000018344C /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADD6A2725E71C000018344C /* CustomTextField.swift */; };
-		3ADD6A2C25E72D0A0018344C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADD6A2B25E72D0A0018344C /* User.swift */; };
+		3ADD6A2C25E72D0A0018344C /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADD6A2B25E72D0A0018344C /* Account.swift */; };
 		3ADD6A3125E72E010018344C /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADD6A3025E72E010018344C /* UserDefaultsManager.swift */; };
 		3ADD6A3525E72FB00018344C /* SwiftKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADD6A3425E72FB00018344C /* SwiftKeychain.swift */; };
 /* End PBXBuildFile section */
@@ -55,7 +55,7 @@
 		3ADD6A1A25E7047E0018344C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		3ADD6A2325E71BCE0018344C /* customTextFieldDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customTextFieldDTO.swift; sourceTree = "<group>"; };
 		3ADD6A2725E71C000018344C /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
-		3ADD6A2B25E72D0A0018344C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		3ADD6A2B25E72D0A0018344C /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		3ADD6A3025E72E010018344C /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		3ADD6A3425E72FB00018344C /* SwiftKeychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftKeychain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -185,7 +185,7 @@
 		3ADD6A2A25E72CEC0018344C /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				3ADD6A2B25E72D0A0018344C /* User.swift */,
+				3ADD6A2B25E72D0A0018344C /* Account.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -281,7 +281,7 @@
 				3ADD6A3125E72E010018344C /* UserDefaultsManager.swift in Sources */,
 				3ADD6A1525E6FF410018344C /* EpisodeDetailsViewController.swift in Sources */,
 				3ADD6A1825E6FF580018344C /* CharacterDetailsViewController.swift in Sources */,
-				3ADD6A2C25E72D0A0018344C /* User.swift in Sources */,
+				3ADD6A2C25E72D0A0018344C /* Account.swift in Sources */,
 				3ADD6A1225E6FD3A0018344C /* EpisodesViewController.swift in Sources */,
 				3ADD6A0C25E6F7E90018344C /* HomeViewController.swift in Sources */,
 				3ADD6A0125E6EBF10018344C /* CustomButton.swift in Sources */,
