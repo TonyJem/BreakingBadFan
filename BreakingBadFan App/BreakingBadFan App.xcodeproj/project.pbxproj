@@ -25,6 +25,8 @@
 		3ADD6A1525E6FF410018344C /* EpisodeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADD6A1425E6FF410018344C /* EpisodeDetailsViewController.swift */; };
 		3ADD6A1825E6FF580018344C /* CharacterDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADD6A1725E6FF580018344C /* CharacterDetailsViewController.swift */; };
 		3ADD6A1B25E7047E0018344C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADD6A1A25E7047E0018344C /* MainViewController.swift */; };
+		3ADD6A2425E71BCE0018344C /* customTextFieldDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADD6A2325E71BCE0018344C /* customTextFieldDTO.swift */; };
+		3ADD6A2825E71C000018344C /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADD6A2725E71C000018344C /* CustomTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		3ADD6A1425E6FF410018344C /* EpisodeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDetailsViewController.swift; sourceTree = "<group>"; };
 		3ADD6A1725E6FF580018344C /* CharacterDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsViewController.swift; sourceTree = "<group>"; };
 		3ADD6A1A25E7047E0018344C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		3ADD6A2325E71BCE0018344C /* customTextFieldDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customTextFieldDTO.swift; sourceTree = "<group>"; };
+		3ADD6A2725E71C000018344C /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				3ADD69FF25E6EBA90018344C /* Button */,
+				3ADD6A1E25E71B8E0018344C /* TextField */,
 				3ADD69F325E6CA530018344C /* Colors.swift */,
 			);
 			path = UIElements;
@@ -157,6 +162,15 @@
 				3ADD6A0525E6ED400018344C /* CustomButtonDTO.swift */,
 			);
 			path = Button;
+			sourceTree = "<group>";
+		};
+		3ADD6A1E25E71B8E0018344C /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				3ADD6A2325E71BCE0018344C /* customTextFieldDTO.swift */,
+				3ADD6A2725E71C000018344C /* CustomTextField.swift */,
+			);
+			path = TextField;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,8 +246,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3ADD6A2825E71C000018344C /* CustomTextField.swift in Sources */,
 				3ADD69D725E6C71D0018344C /* LoginViewController.swift in Sources */,
 				3ADD6A0625E6ED400018344C /* CustomButtonDTO.swift in Sources */,
+				3ADD6A2425E71BCE0018344C /* customTextFieldDTO.swift in Sources */,
 				3ADD69F425E6CA530018344C /* Colors.swift in Sources */,
 				3ADD6A1B25E7047E0018344C /* MainViewController.swift in Sources */,
 				3ADD6A1525E6FF410018344C /* EpisodeDetailsViewController.swift in Sources */,
