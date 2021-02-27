@@ -19,17 +19,27 @@ struct AccountManager {
             }
         }
     }
-    
+
     static var loggedInAccount: Account? {
         didSet {
-            registerCurrentAccount()
+            guard loggedInAccount != nil else { return }
+            UserDefaultsManager.currentAccount = loggedInAccount
         }
     }
-}
-
-// MARK: - Main functionality
-
-extension AccountManager {
+    
+    static func login(username: String?, password: String?) throws {
+        guard let accounts = UserDefaultsManager.accounts else {
+            throw AccountManagerError.accountNotFound
+        }
+        for account in accounts where account.username == username {
+            guard password == UserDefaultsManager.getPassword(username: account.username) else {
+                throw AccountManagerError.wrongPassword
+            }
+            loggedInAccount = account
+            return
+        }
+        throw AccountManagerError.accountNotFound
+    }
     
     static func registerAccount(username: String?, password: String?) throws {
         guard
@@ -49,35 +59,11 @@ extension AccountManager {
         loggedInAccount = account
     }
     
-    static func login(username: String?, password: String?) throws {
-        guard let accounts = UserDefaultsManager.accounts else {
-            throw AccountManagerError.accountNotFound
-        }
-        for account in accounts where account.username == username {
-            guard password == UserDefaultsManager.getPassword(username: account.username) else {
-                throw AccountManagerError.wrongPassword
-            }
-            loggedInAccount = account
-            return
-        }
-        throw AccountManagerError.accountNotFound
-    }
-}
-
-// MARK: - Helpers
-
-private extension AccountManager {
-    
-    static func isUsernameTaken(_ username: String) -> Bool {
+    private static func isUsernameTaken(_ username: String) -> Bool {
         guard let accounts = UserDefaultsManager.accounts else { return false }
         return accounts.contains { account -> Bool in
             account.username == username
         }
     }
     
-    static func registerCurrentAccount() {
-        guard loggedInAccount != nil else { return }
-        UserDefaultsManager.currentAccount = loggedInAccount
-    }
 }
-
