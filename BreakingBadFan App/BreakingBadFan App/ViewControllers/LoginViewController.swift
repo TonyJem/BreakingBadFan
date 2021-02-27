@@ -45,7 +45,7 @@ class LoginViewController: MainViewController {
     
     @IBAction private func loginSegmentedControlChanged(_ sender: UISegmentedControl) {
         selectedFlow = sender.selectedSegmentIndex == 0 ? .login : .register
-        clearPasswordTextFields()
+        clearTextFields(withPasswordsOnly: true)
         submitButton.isEnabled = false
     }
     
@@ -58,22 +58,24 @@ class LoginViewController: MainViewController {
                 try AccountManager.login(username: usernameTextField.text, password: passwordTextField.text)
                 print("🟢🟢 No Errors in Login Flow")
                 proceedToHomeView()
+                clearTextFields()
+// TODO: Need to ask: kodel "becomeFirstResponder" neSuveikia ? bent kursorius mirksi paskutiniame pildytame textFielde:
+                usernameTextField.becomeFirstResponder()
+                
             } catch {
                 if let error = error as? AccountManager.AccountManagerError {
-                    print("🟣 Error occured!")
-                    print(error.errorDescription)
+                    callAlert(with: error.errorDescription)
                 }
             }
         case .register:
             print("🟢 Proceed Register Flow")
             do {
-                try AccountManager.registerAccount(username: usernameTextField.text, password: passwordTextField.text)
+                try AccountManager.registerAccount(username: usernameTextField.text, password: passwordTextField.text, confirmPassword: confirmPasswordTextField.text)
                 print("🟢🟢 No Errors in Register Flow")
                 proceedToHomeView()
             } catch {
                 if let error = error as? AccountManager.AccountManagerError {
-                    print("🟣 Error occured!")
-                    print(error.errorDescription)
+                    callAlert(with: error.errorDescription)
                 }
             }
         }
@@ -94,9 +96,18 @@ private extension LoginViewController {
         registerFlowTextfields = [usernameTextField, passwordTextField, confirmPasswordTextField]
     }
     
-    func clearPasswordTextFields() {
+    func clearTextFields(withPasswordsOnly: Bool = false) {
         passwordTextField.text = ""
         confirmPasswordTextField.text = ""
+        usernameTextField.text = withPasswordsOnly ? usernameTextField.text : ""
+    }
+    
+    func callAlert(with errorMessage: String) {
+        let titleForFlow = selectedFlow == .login ? "Login is not possible!" : "Register is not possible!"
+        let alert = UIAlertController(title: titleForFlow, message: errorMessage,
+                                      preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
     
 }
