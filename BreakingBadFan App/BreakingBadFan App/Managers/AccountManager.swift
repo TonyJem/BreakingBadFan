@@ -1,11 +1,11 @@
 struct AccountManager {
-
-    private enum AccountManagerError: Error {
+    
+    enum AccountManagerError: Error {
         case missingValues
         case accountAlreadyExists
         case wrongPassword
         case accountNotFound
-
+        
         var errorDescription: String {
             switch self {
             case .missingValues:
@@ -19,10 +19,10 @@ struct AccountManager {
             }
         }
     }
-
+    
     static var loggedInAccount: Account? {
         didSet {
-            registerCurrentUser()
+            registerCurrentAccount()
         }
     }
 }
@@ -30,7 +30,7 @@ struct AccountManager {
 // MARK: - Main functionality
 
 extension AccountManager {
-
+    
     static func registerAccount(username: String?, password: String?) throws {
         guard
             let username = username,
@@ -40,7 +40,7 @@ extension AccountManager {
         else {
             throw AccountManagerError.missingValues
         }
-
+        
         guard !isUsernameTaken(username) else {
             throw AccountManagerError.accountAlreadyExists
         }
@@ -48,7 +48,7 @@ extension AccountManager {
         UserDefaultsManager.saveAccount(&account)
         loggedInAccount = account
     }
-
+    
     static func login(username: String?, password: String?) throws {
         guard let accounts = UserDefaultsManager.accounts else {
             throw AccountManagerError.accountNotFound
@@ -67,7 +67,7 @@ extension AccountManager {
 // MARK: - Helpers
 
 private extension AccountManager {
-
+    
     static func isUsernameTaken(_ username: String) -> Bool {
         guard let accounts = UserDefaultsManager.accounts else { return false }
         return accounts.contains { account -> Bool in
@@ -75,7 +75,7 @@ private extension AccountManager {
         }
     }
     
-    static func registerCurrentUser() {
+    static func registerCurrentAccount() {
         guard loggedInAccount != nil else { return }
         UserDefaultsManager.currentAccount = loggedInAccount
     }

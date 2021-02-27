@@ -46,11 +46,18 @@ class LoginViewController: MainViewController {
             print("🟢 Proceed Login Flow")
         case .register:
             print("🟢 Proceed Register Flow")
+            do {
+                try AccountManager.registerAccount(username: usernameTextField.text, password: passwordTextField.text)
+                print("🟢🟢 No Errors in register")
+                proceedToHomeView()
+            } catch {
+                if let error = error as? AccountManager.AccountManagerError {
+                    print("🟣 Error occured!")
+                    print(error.errorDescription)
+                }
+            }
         }
-        
-        proceedToHomeView()
     }
-    
 }
 
 private extension LoginViewController {
