@@ -39,7 +39,6 @@ class LoginViewController: MainViewController {
 private extension LoginViewController {
     
     private func setupUI() {
-        view.backgroundColor = Colors.mainBackgroundColor
         loginSegmentedControl.selectedSegmentIndex = 0
         confirmPasswordTextField.isHidden = true
         submitButton.isEnabled = false
