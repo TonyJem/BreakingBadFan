@@ -11,7 +11,7 @@
         <!--Episodes-->
         <scene sceneID="u1x-Kc-ON7">
             <objects>
-                <viewController storyboardIdentifier="Episodes" id="hgE-bD-G6B" customClass="EpisodesViewController" customModule="BreakingBadFan_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hgE-bD-G6B" customClass="EpisodesViewController" customModule="BreakingBadFan_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9bf-4P-0vI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -95,7 +95,7 @@
         <!--Navigation Controller-->
         <scene sceneID="aaa-OV-7cG">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sy9-Ue-lky" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Episodes" automaticallyAdjustsScrollViewInsets="NO" id="sy9-Ue-lky" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="N0D-ne-WsL">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
