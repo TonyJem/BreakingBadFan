@@ -27,8 +27,7 @@ class LoginViewController: MainViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupUI()
-        prepareTextFields()
+        setupControls()
     }
     
     @objc func textChanged(_ textField: UITextField) {
@@ -49,7 +48,6 @@ class LoginViewController: MainViewController {
             print("🟢 Proceed Register Flow")
         }
         
-        
         proceedToHomeView()
     }
     
@@ -57,13 +55,11 @@ class LoginViewController: MainViewController {
 
 private extension LoginViewController {
     
-    private func setupUI() {
+    private func setupControls() {
         loginSegmentedControl.selectedSegmentIndex = 0
         confirmPasswordTextField.isHidden = true
         submitButton.isEnabled = false
-    }
-    
-    private func prepareTextFields() {
+        
         usernameTextField.addTarget(self, action: #selector(textChanged(_:)), for: .editingChanged)
         passwordTextField.addTarget(self, action: #selector(textChanged(_:)), for: .editingChanged)
         confirmPasswordTextField.addTarget(self, action: #selector(textChanged(_:)), for: .editingChanged)

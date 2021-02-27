@@ -1,6 +1,6 @@
 struct AccountManager {
 
-    enum AccountManagerError: Error {
+    private enum AccountManagerError: Error {
         case missingValues
         case accountAlreadyExists
         case wrongPassword
@@ -77,7 +77,7 @@ private extension AccountManager {
     
     static func registerCurrentUser() {
         guard loggedInAccount != nil else { return }
-        UserDefaultsManager.currentUser = loggedInAccount
+        UserDefaultsManager.currentAccount = loggedInAccount
     }
 }
 
