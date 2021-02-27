@@ -45,6 +45,8 @@ class LoginViewController: MainViewController {
     
     @IBAction private func loginSegmentedControlChanged(_ sender: UISegmentedControl) {
         selectedFlow = sender.selectedSegmentIndex == 0 ? .login : .register
+        clearPasswordTextFields()
+        submitButton.isEnabled = false
     }
     
     @IBAction private func submitButtonTapped(_ sender: UIButton) {
@@ -80,7 +82,7 @@ class LoginViewController: MainViewController {
 
 private extension LoginViewController {
     
-    private func setupControls() {
+    func setupControls() {
         loginSegmentedControl.selectedSegmentIndex = 0
         confirmPasswordTextField.isHidden = true
         submitButton.isEnabled = false
@@ -90,6 +92,11 @@ private extension LoginViewController {
         confirmPasswordTextField.addTarget(self, action: #selector(textChanged(_:)), for: .editingChanged)
         loginFlowTextfields = [usernameTextField, passwordTextField]
         registerFlowTextfields = [usernameTextField, passwordTextField, confirmPasswordTextField]
+    }
+    
+    func clearPasswordTextFields() {
+        passwordTextField.text = ""
+        confirmPasswordTextField.text = ""
     }
     
 }
