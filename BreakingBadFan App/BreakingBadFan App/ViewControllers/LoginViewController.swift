@@ -76,6 +76,7 @@ class LoginViewController: MainViewController {
                 clearTextFields()
                 loginSegmentedControl.selectedSegmentIndex = 0
                 confirmPasswordTextField.isHidden = true
+                selectedFlow = .login
             } catch {
                 if let error = error as? AccountManager.AccountManagerError {
                     callAlert(with: error.errorDescription)
