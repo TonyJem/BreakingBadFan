@@ -1,9 +1,0 @@
-// MARK: Login screen
-"login_screen_application_title_label" = "Breaking Bad Fan";
-"login_screen_log_in_button_title" = "LOGIN";
-"login_screen_register_button_title" = "REGISTER";
-"login_screen_username_textfield_placeholder" = "Username";
-"login_screen_password_textfield_placeholder"  = "Password";
-"login_screen_confirm_password_textfield_placeholder"  = "Confirm Password";
-"login_screen_submit_button_title" = "Submit";
-
