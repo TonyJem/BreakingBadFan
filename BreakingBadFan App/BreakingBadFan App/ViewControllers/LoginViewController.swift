@@ -45,7 +45,7 @@ class LoginViewController: MainViewController {
     
     @IBAction private func loginSegmentedControlChanged(_ sender: UISegmentedControl) {
         selectedFlow = sender.selectedSegmentIndex == 0 ? .login : .register
-        clearPasswordTextFields()
+        clearTextFields(withPasswordsOnly: true)
         submitButton.isEnabled = false
     }
     
@@ -58,11 +58,12 @@ class LoginViewController: MainViewController {
                 try AccountManager.login(username: usernameTextField.text, password: passwordTextField.text)
                 print("🟢🟢 No Errors in Login Flow")
                 proceedToHomeView()
+                clearTextFields()
+// TODO: Need to ask: kodel "becomeFirstResponder" neSuveikia ? bent kursorius mirksi paskutiniame pildytame textFielde:
+                usernameTextField.becomeFirstResponder()
                 
             } catch {
                 if let error = error as? AccountManager.AccountManagerError {
-                    print("🟣 Error occured!")
-                    print(error.errorDescription)
                     callAlert(with: error.errorDescription)
                 }
             }
@@ -74,8 +75,6 @@ class LoginViewController: MainViewController {
                 proceedToHomeView()
             } catch {
                 if let error = error as? AccountManager.AccountManagerError {
-                    print("🟣 Error occured!")
-                    print(error.errorDescription)
                     callAlert(with: error.errorDescription)
                 }
             }
@@ -97,9 +96,10 @@ private extension LoginViewController {
         registerFlowTextfields = [usernameTextField, passwordTextField, confirmPasswordTextField]
     }
     
-    func clearPasswordTextFields() {
+    func clearTextFields(withPasswordsOnly: Bool = false) {
         passwordTextField.text = ""
         confirmPasswordTextField.text = ""
+        usernameTextField.text = withPasswordsOnly ? usernameTextField.text : ""
     }
     
     func callAlert(with errorMessage: String) {
