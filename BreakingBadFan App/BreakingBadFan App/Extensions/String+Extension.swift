@@ -1,18 +1,35 @@
 import Foundation
 
 extension String {
+    struct Constants {
+        static let uppercaseCharactersRegEx = ".*[A-Z]+.*"
+        static let lowercaseCharactersRegEx = ".*[a-z]+.*"
+        static let numberRegEx = ".*[0-9]+.*"
+        static let specialCharactersRegEx = ".*[!&^%$#@()/]+.*"
+    }
 
     var isNotEmpty: Bool {
         !isEmpty
     }
     
-    var hasUpperCase: Bool {
-        let texttest = NSPredicate(format:"SELF MATCHES %@", ".*[A-Z]+.*")
-        return texttest.evaluate(with: self)
+    var hasUppercase: Bool {
+        let testText = NSPredicate(format: "SELF MATCHES %@", Constants.uppercaseCharactersRegEx)
+        return testText.evaluate(with: self)
+    }
+    
+    var hasLowercase: Bool {
+        let testText = NSPredicate(format: "SELF MATCHES %@", Constants.lowercaseCharactersRegEx)
+        return testText.evaluate(with: self)
+    }
+    
+    var hasNumber: Bool {
+        let testText = NSPredicate(format: "SELF MATCHES %@", Constants.numberRegEx)
+        return testText.evaluate(with: self)
+    }
+    
+    var hasSpecialCharacter: Bool {
+        let testText = NSPredicate(format: "SELF MATCHES %@", Constants.specialCharactersRegEx)
+        return testText.evaluate(with: self)
     }
     
 }
-
-//    let capitalLetterRegEx  = ".*[A-Z]+.*"
-//    let numberRegEx  = ".*[0-9]+.*"
-//    let specialCharacterRegEx  = ".*[!&^%$#@()/]+.*"

@@ -9,7 +9,6 @@ struct AccountManager {
         case passwordIsToShort
         case noUpperCaseCharacterInPassword
         case noLowerCaseCharacterInPassword
-        case noLiteralCharacterInPassword
         case noNumericCharacterInPassword
         case noSpecialCharacterInPassword
         
@@ -31,12 +30,10 @@ struct AccountManager {
                 return "Your password must contain at least one upper case, or capital, letter!"
             case .noLowerCaseCharacterInPassword:
                 return "Your password must contain at least one lower case letter!"
-            case .noLiteralCharacterInPassword:
-                return "Your password must contain at least one alphabetic character!"
             case .noNumericCharacterInPassword:
                 return "Your password must contain at least one number digit !"
             case .noSpecialCharacterInPassword:
-                return "Your password must contain at least one special character! \nFor example: $, #, @, !,%,^,&,*,(,) etc."
+                return "Your password must contain at least one special character from following: \n$, !, &, ^, %, $, #, @, (, ), /"
             }
         }
     }
@@ -85,8 +82,21 @@ struct AccountManager {
             throw AccountManagerError.passwordIsToShort
         }
         
-        guard password.hasUpperCase else {
+        guard password.hasUppercase else {
             throw AccountManagerError.noUpperCaseCharacterInPassword
+        }
+        
+        guard password.hasLowercase else {
+            throw AccountManagerError.noLowerCaseCharacterInPassword
+        }
+        
+        guard password.hasNumber else {
+            throw AccountManagerError.noNumericCharacterInPassword
+        }
+        
+        
+        guard password.hasSpecialCharacter else {
+            throw AccountManagerError.noSpecialCharacterInPassword
         }
         
         var account = Account(username: username, password: password)
