@@ -11,7 +11,7 @@
         <!--Episodes-->
         <scene sceneID="u1x-Kc-ON7">
             <objects>
-                <viewController id="hgE-bD-G6B" customClass="EpisodesViewController" customModule="BreakingBadFan_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Episodes" id="hgE-bD-G6B" customClass="EpisodesViewController" customModule="BreakingBadFan_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9bf-4P-0vI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
