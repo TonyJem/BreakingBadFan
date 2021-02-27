@@ -58,10 +58,12 @@ class LoginViewController: MainViewController {
                 try AccountManager.login(username: usernameTextField.text, password: passwordTextField.text)
                 print("🟢🟢 No Errors in Login Flow")
                 proceedToHomeView()
+                
             } catch {
                 if let error = error as? AccountManager.AccountManagerError {
                     print("🟣 Error occured!")
                     print(error.errorDescription)
+                    callAlert(with: error.errorDescription)
                 }
             }
         case .register:
@@ -74,6 +76,7 @@ class LoginViewController: MainViewController {
                 if let error = error as? AccountManager.AccountManagerError {
                     print("🟣 Error occured!")
                     print(error.errorDescription)
+                    callAlert(with: error.errorDescription)
                 }
             }
         }
@@ -97,6 +100,14 @@ private extension LoginViewController {
     func clearPasswordTextFields() {
         passwordTextField.text = ""
         confirmPasswordTextField.text = ""
+    }
+    
+    func callAlert(with errorMessage: String) {
+        let titleForFlow = selectedFlow == .login ? "Login is not possible!" : "Register is not possible!"
+        let alert = UIAlertController(title: titleForFlow, message: errorMessage,
+                                      preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
     
 }

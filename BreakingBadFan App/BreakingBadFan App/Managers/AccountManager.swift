@@ -15,23 +15,23 @@ struct AccountManager {
         var errorDescription: String {
             switch self {
             case .missingValues:
-                return "Missing required values!"
+                return "Missing required values."
             case .accountAlreadyExists:
-                return "This username is already taken!"
+                return "This username is already taken."
             case .wrongPassword:
-                return "Password is incorrect!"
+                return "Password is not correct."
             case .accountNotFound:
-                return "Account with this username is not found!"
+                return "Account with this username is not found."
             case .passwordDoNotMatch:
-                return "Your password and confirmation password do not match!"
+                return "Your password and confirmation password do not match."
             case .passwordIsToShort:
-                return "Your password must be at least 8 characters!"
+                return "Your password must be at least 8 characters."
             case .noUpperCaseCharacterInPassword:
-                return "Your password must contain at least one upper case, or capital, letter!"
+                return "Your password must contain at least one upper case, or capital, letter."
             case .noLowerCaseCharacterInPassword:
-                return "Your password must contain at least one lower case letter!"
+                return "Your password must contain at least one lower case letter."
             case .noNumericCharacterInPassword:
-                return "Your password must contain at least one number digit !"
+                return "Your password must contain at least one number digit."
             case .noSpecialCharacterInPassword:
                 return "Your password must contain at least one special character from following: \n$, !, &, ^, %, $, #, @, (, ), /"
             }
