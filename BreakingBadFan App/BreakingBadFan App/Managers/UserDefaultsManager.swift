@@ -3,8 +3,8 @@ import Foundation
 struct UserDefaultsManager {
     
     private enum UserDefaultsManagerKey {
-        static let accounts = "Account"
-        static let currentAccount = "currentAccount"
+        static let accounts = "Accounts"
+        static let loggedInAccount = "loggedInAccount"
     }
     
     private static var userDefaults: UserDefaults {
@@ -47,15 +47,21 @@ extension UserDefaultsManager {
     
     static var currentAccount: Account? {
         get {
-            guard let currentAccount = userDefaults.object(forKey: UserDefaultsManagerKey.currentAccount) as? Data else {
+            guard let currentAccount = userDefaults.object(forKey: UserDefaultsManagerKey.loggedInAccount) as? Data else {
                 return nil
             }
             return try? JSONDecoder().decode(Account.self, from: currentAccount)
         } set {
             let currentAccount = try? JSONEncoder().encode(newValue)
-            userDefaults.set(currentAccount, forKey: UserDefaultsManagerKey.currentAccount)
+            userDefaults.set(currentAccount, forKey: UserDefaultsManagerKey.loggedInAccount)
         }
     }
+    
+}
+
+// MARK: - keyChain methods
+
+extension UserDefaultsManager {
     
     private static func savePassword(_ password: String, username: String) {
         keyChain.set(password, forKey: username)
@@ -64,4 +70,5 @@ extension UserDefaultsManager {
     static func getPassword(username: String) -> String? {
         keyChain.get(username)
     }
+    
 }

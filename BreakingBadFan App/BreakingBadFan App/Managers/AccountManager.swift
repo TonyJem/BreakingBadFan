@@ -20,8 +20,6 @@ struct AccountManager {
             case .passwordDoNotMatch:
                 return "Your password and confirmation password do not match!"
             }
-            
-            
         }
     }
 
