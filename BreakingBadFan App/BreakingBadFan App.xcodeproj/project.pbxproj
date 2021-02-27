@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A8C2AC125EA884C008C2042 /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8C2AC025EA884C008C2042 /* AccountManager.swift */; };
+		3A8C2AC525EA8AA8008C2042 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8C2AC425EA8AA8008C2042 /* String+Extension.swift */; };
 		3ADD69D325E6C71D0018344C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADD69D225E6C71D0018344C /* AppDelegate.swift */; };
 		3ADD69D525E6C71D0018344C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADD69D425E6C71D0018344C /* SceneDelegate.swift */; };
 		3ADD69D725E6C71D0018344C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADD69D625E6C71D0018344C /* LoginViewController.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A8C2AC025EA884C008C2042 /* AccountManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountManager.swift; sourceTree = "<group>"; };
+		3A8C2AC425EA8AA8008C2042 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		3ADD69CF25E6C71D0018344C /* BreakingBadFan App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BreakingBadFan App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ADD69D225E6C71D0018344C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3ADD69D425E6C71D0018344C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +63,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A8C2AC325EA8A7B008C2042 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3A8C2AC425EA8AA8008C2042 /* String+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		3ADD69C625E6C71D0018344C = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +90,7 @@
 		3ADD69D125E6C71D0018344C /* BreakingBadFan App */ = {
 			isa = PBXGroup;
 			children = (
+				3A8C2AC325EA8A7B008C2042 /* Extensions */,
 				3ADD69F225E6CA3D0018344C /* UIelements */,
 				3ADD69E825E6C8640018344C /* Storyboards */,
 				3ADD69E725E6C84C0018344C /* ViewControllers */,
@@ -152,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				3ADD6A3025E72E010018344C /* UserDefaultsManager.swift */,
+				3A8C2AC025EA884C008C2042 /* AccountManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -236,6 +250,8 @@
 				3ADD6A1525E6FF410018344C /* EpisodeDetailsViewController.swift in Sources */,
 				3ADD6A1825E6FF580018344C /* CharacterDetailsViewController.swift in Sources */,
 				3ADD6A2C25E72D0A0018344C /* Account.swift in Sources */,
+				3A8C2AC525EA8AA8008C2042 /* String+Extension.swift in Sources */,
+				3A8C2AC125EA884C008C2042 /* AccountManager.swift in Sources */,
 				3ADD6A1225E6FD3A0018344C /* EpisodesViewController.swift in Sources */,
 				3ADD6A0C25E6F7E90018344C /* HomeViewController.swift in Sources */,
 				3ADD69D325E6C71D0018344C /* AppDelegate.swift in Sources */,
