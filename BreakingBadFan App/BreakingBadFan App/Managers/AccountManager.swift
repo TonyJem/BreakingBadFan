@@ -19,13 +19,13 @@ struct AccountManager {
             }
         }
     }
-
-    static var loggedInAccount: Account? {
-        didSet {
-            guard loggedInAccount != nil else { return }
-            UserDefaultsManager.currentAccount = loggedInAccount
-        }
-    }
+// TODO: Remove or use later
+//    static var loggedInAccount: Account? {
+//        didSet {
+//            guard loggedInAccount != nil else { return }
+//            UserDefaultsManager.currentAccount = loggedInAccount
+//        }
+//    }
     
     static func login(username: String?, password: String?) throws {
         guard let accounts = UserDefaultsManager.accounts else {
@@ -35,7 +35,7 @@ struct AccountManager {
             guard password == UserDefaultsManager.getPassword(username: account.username) else {
                 throw AccountManagerError.wrongPassword
             }
-            loggedInAccount = account
+//            loggedInAccount = account
             return
         }
         throw AccountManagerError.accountNotFound
@@ -56,7 +56,7 @@ struct AccountManager {
         }
         var account = Account(username: username, password: password)
         UserDefaultsManager.saveAccount(&account)
-        loggedInAccount = account
+//        loggedInAccount = account
     }
     
     private static func isUsernameTaken(_ username: String) -> Bool {

@@ -1,11 +1,10 @@
 import UIKit
 
-enum Flow {
-    case login
-    case register
-}
-
 class LoginViewController: MainViewController {
+    private enum Flow {
+        case login
+        case register
+    }
     
     @IBOutlet private weak var appTitleLabel: UILabel!
     @IBOutlet private weak var loginSegmentedControl: UISegmentedControl!
