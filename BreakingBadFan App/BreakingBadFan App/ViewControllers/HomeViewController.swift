@@ -29,6 +29,7 @@ class HomeViewController: MainViewController {
     }
     
     @IBAction private func logoutButtonTapped(_ sender: UIButton) {
+        AccountManager.loggedInAccount = nil
         dismiss(animated: true)
     }
     

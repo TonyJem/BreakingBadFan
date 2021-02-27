@@ -29,6 +29,15 @@ class LoginViewController: MainViewController {
         setupControls()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        guard let savedAccount = UserDefaultsManager.currentAccount else { return }
+        AccountManager.loggedInAccount = savedAccount
+        print("🟢 Account is: \(savedAccount.username)")
+        proceedToHomeView()
+    }
+    
     @objc func textChanged(_ textField: UITextField) {
         shownTextfields = confirmPasswordTextField.isHidden ? loginFlowTextfields : registerFlowTextfields
         submitButton.isEnabled = !shownTextfields.contains { $0.text!.isEmpty }

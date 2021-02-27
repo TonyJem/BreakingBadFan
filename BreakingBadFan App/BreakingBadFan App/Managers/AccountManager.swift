@@ -22,7 +22,6 @@ struct AccountManager {
 
     static var loggedInAccount: Account? {
         didSet {
-            guard loggedInAccount != nil else { return }
             UserDefaultsManager.currentAccount = loggedInAccount
         }
     }
