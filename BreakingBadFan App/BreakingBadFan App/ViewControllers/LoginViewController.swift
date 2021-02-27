@@ -44,11 +44,21 @@ class LoginViewController: MainViewController {
         switch selectedFlow {
         case .login:
             print("🟢 Proceed Login Flow")
+            do {
+                try AccountManager.login(username: usernameTextField.text, password: passwordTextField.text)
+                print("🟢🟢 No Errors in Login Flow")
+                proceedToHomeView()
+            } catch {
+                if let error = error as? AccountManager.AccountManagerError {
+                    print("🟣 Error occured!")
+                    print(error.errorDescription)
+                }
+            }
         case .register:
             print("🟢 Proceed Register Flow")
             do {
                 try AccountManager.registerAccount(username: usernameTextField.text, password: passwordTextField.text)
-                print("🟢🟢 No Errors in register")
+                print("🟢🟢 No Errors in Register Flow")
                 proceedToHomeView()
             } catch {
                 if let error = error as? AccountManager.AccountManagerError {
