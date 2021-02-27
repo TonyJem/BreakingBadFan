@@ -14,6 +14,7 @@ class HomeViewController: MainViewController {
         
         guard let loggedInAccount = AccountManager.loggedInAccount else { return }
         usernameLabel.text = loggedInAccount.username
+        quotesButton.isEnabled = !loggedInAccount.favouriteQuotes.isEmpty
     }
     
     @IBAction private func episodesButtonTapped(_ sender: UIButton) {

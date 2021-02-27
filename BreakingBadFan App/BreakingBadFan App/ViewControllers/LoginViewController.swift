@@ -73,6 +73,9 @@ class LoginViewController: MainViewController {
                 try AccountManager.registerAccount(username: usernameTextField.text, password: passwordTextField.text, confirmPassword: confirmPasswordTextField.text)
                 print("🟢🟢 No Errors in Register Flow")
                 proceedToHomeView()
+                clearTextFields()
+                loginSegmentedControl.selectedSegmentIndex = 0
+                confirmPasswordTextField.isHidden = true
             } catch {
                 if let error = error as? AccountManager.AccountManagerError {
                     callAlert(with: error.errorDescription)

@@ -99,7 +99,7 @@ struct AccountManager {
             throw AccountManagerError.noSpecialCharacterInPassword
         }
         
-        var account = Account(username: username, password: password)
+        var account = Account(username: username, password: password, favouriteQuotes: [])
         UserDefaultsManager.saveAccount(&account)
         loggedInAccount = account
     }
