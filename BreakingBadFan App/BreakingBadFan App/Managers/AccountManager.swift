@@ -6,6 +6,12 @@ struct AccountManager {
         case wrongPassword
         case accountNotFound
         case passwordDoNotMatch
+        case passwordIsToShort
+        case noUpperCaseCharacterInPassword
+        case noLowerCaseCharacterInPassword
+        case noLiteralCharacterInPassword
+        case noNumericCharacterInPassword
+        case noSpecialCharacterInPassword
         
         var errorDescription: String {
             switch self {
@@ -19,10 +25,22 @@ struct AccountManager {
                 return "Account with this username is not found!"
             case .passwordDoNotMatch:
                 return "Your password and confirmation password do not match!"
+            case .passwordIsToShort:
+                return "Your password must be at least 8 characters!"
+            case .noUpperCaseCharacterInPassword:
+                return "Your password must contain at least one upper case, or capital, letter!"
+            case .noLowerCaseCharacterInPassword:
+                return "Your password must contain at least one lower case letter!"
+            case .noLiteralCharacterInPassword:
+                return "Your password must contain at least one alphabetic character!"
+            case .noNumericCharacterInPassword:
+                return "Your password must contain at least one number digit !"
+            case .noSpecialCharacterInPassword:
+                return "Your password must contain at least one special character! \nFor example: $, #, @, !,%,^,&,*,(,) etc."
             }
         }
     }
-
+    
     static var loggedInAccount: Account? {
         didSet {
             UserDefaultsManager.currentAccount = loggedInAccount
@@ -43,12 +61,14 @@ struct AccountManager {
         throw AccountManagerError.accountNotFound
     }
     
-    static func registerAccount(username: String?, password: String?) throws {
+    static func registerAccount(username: String?, password: String?, confirmPassword: String?) throws {
         guard
             let username = username,
             let password = password,
+            let confirmPassword = confirmPassword,
             username.isNotEmpty,
-            password.isNotEmpty
+            password.isNotEmpty,
+            confirmPassword.isNotEmpty
         else {
             throw AccountManagerError.missingValues
         }
@@ -56,6 +76,19 @@ struct AccountManager {
         guard !isUsernameTaken(username) else {
             throw AccountManagerError.accountAlreadyExists
         }
+        
+        guard password == confirmPassword else {
+            throw AccountManagerError.passwordDoNotMatch
+        }
+        
+        guard password.count >= 8 else {
+            throw AccountManagerError.passwordIsToShort
+        }
+        
+        guard password.hasUpperCase else {
+            throw AccountManagerError.noUpperCaseCharacterInPassword
+        }
+        
         var account = Account(username: username, password: password)
         UserDefaultsManager.saveAccount(&account)
         loggedInAccount = account

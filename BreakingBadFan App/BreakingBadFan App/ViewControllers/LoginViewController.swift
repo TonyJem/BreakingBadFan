@@ -67,7 +67,7 @@ class LoginViewController: MainViewController {
         case .register:
             print("🟢 Proceed Register Flow")
             do {
-                try AccountManager.registerAccount(username: usernameTextField.text, password: passwordTextField.text)
+                try AccountManager.registerAccount(username: usernameTextField.text, password: passwordTextField.text, confirmPassword: confirmPasswordTextField.text)
                 print("🟢🟢 No Errors in Register Flow")
                 proceedToHomeView()
             } catch {
