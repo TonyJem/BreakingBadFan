@@ -4,6 +4,7 @@ class BreakingBadApiConstants {
     
     static let baseUrl: String = "https://www.breakingbadapi.com/api/"
     static let paramCharacters: String = "characters/"
+    static let paramEpisodes: String = "episodes/"
     
 }
 
@@ -19,6 +20,16 @@ struct Character: Codable {
     let portrayed: String
     let category: String
     let better_call_saul_appearance: [Int]?
+}
+
+struct EpisodeT: Codable {
+    let episode_id: Int
+    let title: String
+    let season: String
+    let air_date: String
+    let characters: [String]
+    let episode: String
+    let series: String
 }
 
 class BreakingBadService {
@@ -40,6 +51,25 @@ class BreakingBadService {
             }
         }).resume()
     }
+    
+    static func getEpisodes(parameters: String, episodeId: String?, completion: @escaping ([EpisodeT]) -> Void) {
+        
+        let url: String = "\(BreakingBadApiConstants.baseUrl)\(parameters)\(episodeId ?? "")"
+        print("[Started] getEpisodes() url == ", url)
+        URLSession.shared.dataTask(with: URL(string: url)!, completionHandler: {data, response, error in
+            guard let data = data, error == nil else { return }
+            
+            do {
+                let response: [EpisodeT] = try JSONDecoder().decode([EpisodeT].self, from: data)
+                completion(response)
+                print("[Success] getEpisodes() [Episode].count == ", response.count)
+                
+            } catch {
+                print("[Error] getEpisodes() ==", error.localizedDescription)
+            }
+        }).resume()
+    }
+    
     
 }
 

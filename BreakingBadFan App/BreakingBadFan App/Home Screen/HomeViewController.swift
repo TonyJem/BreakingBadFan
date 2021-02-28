@@ -33,6 +33,14 @@ class HomeViewController: MainViewController {
             print("🟡 Selected Character nickname \(response[0].nickname)")
         })
         
+        BreakingBadService.getEpisodes(parameters: BreakingBadApiConstants.paramEpisodes, episodeId: nil, completion: { response in
+            print("🟣 [Espisode].count == ", response.count)
+        })
+        
+        BreakingBadService.getEpisodes(parameters: BreakingBadApiConstants.paramEpisodes, episodeId: "1", completion: { response in
+            print("🟣 Title for selected Episode: ", response[0].title)
+        })
+        
     }
     
     @IBAction private func quotesButtonTapped(_ sender: UIButton) {
