@@ -1,9 +1,9 @@
 struct Season {
     let title: String
-    let episodes: [Episode]
+    let episodes: [EpisodeTest]
 }
 
-struct Episode {
+struct EpisodeTest {
     let title: String
     
     init(title: String) {
@@ -15,9 +15,9 @@ class SeasonModel {
     
 //    TODO: TestData
     let seasons = [
-        Season(title: "Season 1", episodes: [Episode(title: "Pilot1"), Episode(title: "Second Episode1"), Episode(title: "Third Episode1")]),
-        Season(title: "Season 2", episodes: [Episode(title: "Pilot2"), Episode(title: "Second Episode2"), Episode(title: "Third Episode2")]),
-        Season(title: "Season 3", episodes: [Episode(title: "Pilot3"), Episode(title: "Second Episode3"), Episode(title: "Third Episode3")])
+        Season(title: "Season 1", episodes: [EpisodeTest(title: "Pilot1"), EpisodeTest(title: "Second Episode1"), EpisodeTest(title: "Third Episode1")]),
+        Season(title: "Season 2", episodes: [EpisodeTest(title: "Pilot2"), EpisodeTest(title: "Second Episode2"), EpisodeTest(title: "Third Episode2")]),
+        Season(title: "Season 3", episodes: [EpisodeTest(title: "Pilot3"), EpisodeTest(title: "Second Episode3"), EpisodeTest(title: "Third Episode3")])
     ]
     
 }
