@@ -31,7 +31,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Episodes" id="g5r-cW-guk">
-                        <barButtonItem key="rightBarButtonItem" title="Filter" id="xDe-24-glH"/>
+                        <barButtonItem key="rightBarButtonItem" title="Filter" id="xDe-24-glH">
+                            <connections>
+                                <action selector="filterButtonIsTapped:" destination="hgE-bD-G6B" id="dwW-01-X2k"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="seasonsTableView" destination="FNV-1F-hhE" id="RGX-up-eAY"/>
