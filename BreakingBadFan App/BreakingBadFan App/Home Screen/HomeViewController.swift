@@ -19,6 +19,7 @@ class HomeViewController: MainViewController {
     
     @IBAction private func episodesButtonTapped(_ sender: UIButton) {
         print("🟢 episodesButtonTapped")
+        proceedEpisodesScene()
     }
     
     @IBAction private func charactersButtonTapped(_ sender: UIButton) {
