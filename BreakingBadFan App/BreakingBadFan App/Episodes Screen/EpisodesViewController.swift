@@ -12,6 +12,7 @@ class EpisodesViewController: UIViewController {
         seasonsTableView.dataSource = self
         seasonsTableView.tableFooterView = UIView()
     }
+    
     @IBAction func filterButtonIsTapped(_ sender: UIBarButtonItem) {
         print("🟢 Filter button is tapped")
     }
