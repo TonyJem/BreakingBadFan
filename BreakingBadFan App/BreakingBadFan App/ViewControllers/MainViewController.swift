@@ -21,7 +21,6 @@ class MainViewController: UIViewController {
     private var EpisodesNavigationController: UINavigationController {
         EpisodesStoryboard.instantiateViewController(identifier: "Episodes")
     }
-
     
 }
 
@@ -35,11 +34,6 @@ extension MainViewController {
     }
     
     func proceedEpisodesScene() {
-        modalPresentationStyle = .fullScreen
-        present(EpisodesNavigationController, animated: true)
-    }
-    
-    func proceedEpisodeDetailsScene() {
         modalPresentationStyle = .fullScreen
         present(EpisodesNavigationController, animated: true)
     }

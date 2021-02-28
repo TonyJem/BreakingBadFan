@@ -24,6 +24,15 @@ class HomeViewController: MainViewController {
     
     @IBAction private func charactersButtonTapped(_ sender: UIButton) {
         print("🟢 charactersButtonTapped")
+        
+        BreakingBadService.getCharacters(parameters: BreakingBadApiConstants.paramCharacters, characterId: nil, completion: { response in
+            print("🟡 [Character].count == ", response.count)
+        })
+        
+        BreakingBadService.getCharacters(parameters: BreakingBadApiConstants.paramCharacters, characterId: "9", completion: { response in
+            print("🟡 Selected Character nickname \(response[0].nickname)")
+        })
+        
     }
     
     @IBAction private func quotesButtonTapped(_ sender: UIButton) {
