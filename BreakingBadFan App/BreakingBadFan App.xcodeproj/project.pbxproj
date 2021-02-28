@@ -10,6 +10,7 @@
 		3A8C2AC125EA884C008C2042 /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8C2AC025EA884C008C2042 /* AccountManager.swift */; };
 		3A8C2AC525EA8AA8008C2042 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8C2AC425EA8AA8008C2042 /* String+Extension.swift */; };
 		3A8C2ACE25EB0E0F008C2042 /* Season.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8C2ACD25EB0E0F008C2042 /* Season.swift */; };
+		3A951FE825EB192B00E207BC /* EpisodesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A951FE725EB192B00E207BC /* EpisodesViewController.swift */; };
 		3ADD69D325E6C71D0018344C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADD69D225E6C71D0018344C /* AppDelegate.swift */; };
 		3ADD69D525E6C71D0018344C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADD69D425E6C71D0018344C /* SceneDelegate.swift */; };
 		3ADD69D725E6C71D0018344C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADD69D625E6C71D0018344C /* LoginViewController.swift */; };
@@ -19,7 +20,6 @@
 		3ADD6A0925E6F79B0018344C /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ADD6A0825E6F79B0018344C /* Home.storyboard */; };
 		3ADD6A0C25E6F7E90018344C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADD6A0B25E6F7E90018344C /* HomeViewController.swift */; };
 		3ADD6A0F25E6FCBD0018344C /* Episodes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ADD6A0E25E6FCBD0018344C /* Episodes.storyboard */; };
-		3ADD6A1225E6FD3A0018344C /* EpisodesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADD6A1125E6FD3A0018344C /* EpisodesViewController.swift */; };
 		3ADD6A1525E6FF410018344C /* EpisodeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADD6A1425E6FF410018344C /* EpisodeDetailsViewController.swift */; };
 		3ADD6A1825E6FF580018344C /* CharacterDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADD6A1725E6FF580018344C /* CharacterDetailsViewController.swift */; };
 		3ADD6A1B25E7047E0018344C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADD6A1A25E7047E0018344C /* MainViewController.swift */; };
@@ -33,6 +33,7 @@
 		3A8C2AC025EA884C008C2042 /* AccountManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountManager.swift; sourceTree = "<group>"; };
 		3A8C2AC425EA8AA8008C2042 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		3A8C2ACD25EB0E0F008C2042 /* Season.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Season.swift; path = "BreakingBadFan App/models/Season.swift"; sourceTree = SOURCE_ROOT; };
+		3A951FE725EB192B00E207BC /* EpisodesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EpisodesViewController.swift; path = "BreakingBadFan App/viewcontrollers/EpisodesViewController.swift"; sourceTree = SOURCE_ROOT; };
 		3ADD69CF25E6C71D0018344C /* BreakingBadFan App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BreakingBadFan App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ADD69D225E6C71D0018344C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3ADD69D425E6C71D0018344C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,7 +45,6 @@
 		3ADD6A0825E6F79B0018344C /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		3ADD6A0B25E6F7E90018344C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3ADD6A0E25E6FCBD0018344C /* Episodes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Episodes.storyboard; sourceTree = "<group>"; };
-		3ADD6A1125E6FD3A0018344C /* EpisodesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesViewController.swift; sourceTree = "<group>"; };
 		3ADD6A1425E6FF410018344C /* EpisodeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDetailsViewController.swift; sourceTree = "<group>"; };
 		3ADD6A1725E6FF580018344C /* CharacterDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsViewController.swift; sourceTree = "<group>"; };
 		3ADD6A1A25E7047E0018344C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -113,7 +113,7 @@
 				3ADD6A1A25E7047E0018344C /* MainViewController.swift */,
 				3ADD69D625E6C71D0018344C /* LoginViewController.swift */,
 				3ADD6A0B25E6F7E90018344C /* HomeViewController.swift */,
-				3ADD6A1125E6FD3A0018344C /* EpisodesViewController.swift */,
+				3A951FE725EB192B00E207BC /* EpisodesViewController.swift */,
 				3ADD6A1425E6FF410018344C /* EpisodeDetailsViewController.swift */,
 				3ADD6A1725E6FF580018344C /* CharacterDetailsViewController.swift */,
 			);
@@ -245,6 +245,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A951FE825EB192B00E207BC /* EpisodesViewController.swift in Sources */,
 				3ADD6A2825E71C000018344C /* CustomTextField.swift in Sources */,
 				3ADD69D725E6C71D0018344C /* LoginViewController.swift in Sources */,
 				3ADD6A3525E72FB00018344C /* SwiftKeychain.swift in Sources */,
@@ -256,7 +257,6 @@
 				3ADD6A2C25E72D0A0018344C /* Account.swift in Sources */,
 				3A8C2AC525EA8AA8008C2042 /* String+Extension.swift in Sources */,
 				3A8C2AC125EA884C008C2042 /* AccountManager.swift in Sources */,
-				3ADD6A1225E6FD3A0018344C /* EpisodesViewController.swift in Sources */,
 				3ADD6A0C25E6F7E90018344C /* HomeViewController.swift in Sources */,
 				3ADD69D325E6C71D0018344C /* AppDelegate.swift in Sources */,
 				3ADD69D525E6C71D0018344C /* SceneDelegate.swift in Sources */,
