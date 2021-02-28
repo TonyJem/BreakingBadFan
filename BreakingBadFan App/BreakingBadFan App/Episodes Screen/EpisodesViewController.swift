@@ -15,6 +15,16 @@ class EpisodesViewController: UIViewController {
     
     @IBAction func filterButtonIsTapped(_ sender: UIBarButtonItem) {
         print("🟢 Filter button is tapped")
+        
+        BreakingBadService.getCharacters(parameters: BreakingBadApiConstants.paramCharacters, characterId: nil, completion: { response in
+            
+            print("🟡 [Character].count == ", response.count)
+        })
+        
+        BreakingBadService.getCharacters(parameters: BreakingBadApiConstants.paramCharacters, characterId: "9", completion: { response in
+            
+            print("🟡 Selected Character nickname \(response[0].nickname)")
+        })
     }
 }
 

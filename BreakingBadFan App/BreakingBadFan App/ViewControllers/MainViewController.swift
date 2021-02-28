@@ -39,4 +39,9 @@ extension MainViewController {
         present(EpisodesNavigationController, animated: true)
     }
     
+    func proceedEpisodeDetailsScene() {
+        modalPresentationStyle = .fullScreen
+        present(EpisodesNavigationController, animated: true)
+    }
+    
 }
