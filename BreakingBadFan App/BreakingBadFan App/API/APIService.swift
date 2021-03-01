@@ -52,7 +52,7 @@ class BreakingBadService {
         }).resume()
     }
     
-    static func getEpisodes(parameters: String, episodeId: String?, completion: @escaping ([EpisodeT]) -> Void) {
+    static func getEpisodes(parameters: String, episodeId: String?, completion: @escaping ([Episode]) -> Void) {
         
         let url: String = "\(BreakingBadApiConstants.baseUrl)\(parameters)\(episodeId ?? "")"
         print("[Started] getEpisodes() url == ", url)
@@ -60,7 +60,7 @@ class BreakingBadService {
             guard let data = data, error == nil else { return }
             
             do {
-                let response: [EpisodeT] = try JSONDecoder().decode([EpisodeT].self, from: data)
+                let response: [Episode] = try JSONDecoder().decode([Episode].self, from: data)
                 completion(response)
                 print("[Success] getEpisodes() [Episode].count == ", response.count)
                 
@@ -76,12 +76,20 @@ class BreakingBadService {
 
 /*
 TODO: Template for getting result
-BreakingBadService.getCharacters(parameters: BreakingBadApiConstants.paramCharacters, characterId: nil, completion: { response in
-    print("🟡 [Character].count == ", response.count)
-})
-
-BreakingBadService.getCharacters(parameters: BreakingBadApiConstants.paramCharacters, characterId: "9", completion: { response in
-    print("🟡 Selected Character nickname \(response[0].nickname)")
-})
+ BreakingBadService.getCharacters(parameters: BreakingBadApiConstants.paramCharacters, characterId: nil, completion: { response in
+     print("🟡 [Character].count == ", response.count)
+ })
+ 
+ BreakingBadService.getCharacters(parameters: BreakingBadApiConstants.paramCharacters, characterId: "1", completion: { response in
+     print("🟡 Selected Character nickname \(response[0].nickname)")
+ })
+ 
+ BreakingBadService.getEpisodes(parameters: BreakingBadApiConstants.paramEpisodes, episodeId: nil, completion: { response in
+     print("🟣 [Espisode].count == ", response.count)
+ })
+ 
+ BreakingBadService.getEpisodes(parameters: BreakingBadApiConstants.paramEpisodes, episodeId: "1", completion: { response in
+     print("🟣 Title for selected Episode: ", response[0].title)
+ })
  
  */
