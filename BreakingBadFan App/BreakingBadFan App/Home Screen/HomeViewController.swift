@@ -9,12 +9,15 @@ class HomeViewController: MainViewController {
     @IBOutlet private weak var quotesButton: UIButton!
     @IBOutlet private weak var logoutButton: UIButton!
     
+    private let apiManager = APIManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         guard let loggedInAccount = AccountManager.loggedInAccount else { return }
         usernameLabel.text = loggedInAccount.username
-        quotesButton.isEnabled = !loggedInAccount.favouriteQuotes.isEmpty
+//        TODO: Temporary off
+//        quotesButton.isEnabled = !loggedInAccount.favouriteQuotes.isEmpty
     }
     
     @IBAction private func episodesButtonTapped(_ sender: UIButton) {
@@ -25,11 +28,27 @@ class HomeViewController: MainViewController {
     @IBAction private func charactersButtonTapped(_ sender: UIButton) {
         print("🟢 charactersButtonTapped")
         
+        apiManager.getEpisodes { result in
+            switch result {
+            case .success(let episodes):
+                
+//   TODO: Add real functionality here
+                print("🟢🟢🟢  Episodes: \(episodes)" )
+                
+            case .failure(let error):
+                print("🔴 \(error)")
+            }
+        }
+    }
+    
+    @IBAction private func quotesButtonTapped(_ sender: UIButton) {
+        print("🟢 quotesButtonTapped")
+        
         BreakingBadService.getCharacters(parameters: BreakingBadApiConstants.paramCharacters, characterId: nil, completion: { response in
             print("🟡 [Character].count == ", response.count)
         })
         
-        BreakingBadService.getCharacters(parameters: BreakingBadApiConstants.paramCharacters, characterId: "9", completion: { response in
+        BreakingBadService.getCharacters(parameters: BreakingBadApiConstants.paramCharacters, characterId: "1", completion: { response in
             print("🟡 Selected Character nickname \(response[0].nickname)")
         })
         
@@ -40,11 +59,6 @@ class HomeViewController: MainViewController {
         BreakingBadService.getEpisodes(parameters: BreakingBadApiConstants.paramEpisodes, episodeId: "1", completion: { response in
             print("🟣 Title for selected Episode: ", response[0].title)
         })
-        
-    }
-    
-    @IBAction private func quotesButtonTapped(_ sender: UIButton) {
-        print("🟢 quotesButtonTapped")
     }
     
     @IBAction private func logoutButtonTapped(_ sender: UIButton) {

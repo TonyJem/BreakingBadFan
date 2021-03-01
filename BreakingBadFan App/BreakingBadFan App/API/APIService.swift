@@ -75,7 +75,7 @@ class BreakingBadService {
 
 
 /*
-
+TODO: Template for getting result
 BreakingBadService.getCharacters(parameters: BreakingBadApiConstants.paramCharacters, characterId: nil, completion: { response in
     print("🟡 [Character].count == ", response.count)
 })

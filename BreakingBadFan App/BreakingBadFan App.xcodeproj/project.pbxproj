@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3A41880E25EC3AA600788829 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A41880D25EC3AA600788829 /* Service.swift */; };
+		3A41880E25EC3AA600788829 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A41880D25EC3AA600788829 /* APIService.swift */; };
 		3A41881325EC4A4C00788829 /* EpisodesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A41881225EC4A4C00788829 /* EpisodesResponse.swift */; };
 		3A41881725EC4FD400788829 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A41881625EC4FD400788829 /* APIEndpoint.swift */; };
+		3A41881A25EC528400788829 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A41881925EC528400788829 /* APIManager.swift */; };
+		3A41881D25EC529100788829 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A41881C25EC529100788829 /* APIError.swift */; };
+		3A41882025EC52EA00788829 /* APIResponseErrorData.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A41881F25EC52EA00788829 /* APIResponseErrorData.swift.swift */; };
 		3A8C2AC125EA884C008C2042 /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8C2AC025EA884C008C2042 /* AccountManager.swift */; };
 		3A8C2AC525EA8AA8008C2042 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8C2AC425EA8AA8008C2042 /* String+Extension.swift */; };
 		3A8C2ACE25EB0E0F008C2042 /* Season.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8C2ACD25EB0E0F008C2042 /* Season.swift */; };
@@ -33,9 +36,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3A41880D25EC3AA600788829 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		3A41880D25EC3AA600788829 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		3A41881225EC4A4C00788829 /* EpisodesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesResponse.swift; sourceTree = "<group>"; };
 		3A41881625EC4FD400788829 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
+		3A41881925EC528400788829 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		3A41881C25EC529100788829 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		3A41881F25EC52EA00788829 /* APIResponseErrorData.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponseErrorData.swift.swift; sourceTree = "<group>"; };
 		3A8C2AC025EA884C008C2042 /* AccountManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountManager.swift; sourceTree = "<group>"; };
 		3A8C2AC425EA8AA8008C2042 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		3A8C2ACD25EB0E0F008C2042 /* Season.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Season.swift; path = "BreakingBadFan App/models/Season.swift"; sourceTree = SOURCE_ROOT; };
@@ -75,8 +81,10 @@
 			isa = PBXGroup;
 			children = (
 				3A41881125EC4A0000788829 /* Response */,
-				3A41880D25EC3AA600788829 /* Service.swift */,
+				3A41880D25EC3AA600788829 /* APIService.swift */,
 				3A41881625EC4FD400788829 /* APIEndpoint.swift */,
+				3A41881925EC528400788829 /* APIManager.swift */,
+				3A41881C25EC529100788829 /* APIError.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -85,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				3A41881225EC4A4C00788829 /* EpisodesResponse.swift */,
+				3A41881F25EC52EA00788829 /* APIResponseErrorData.swift.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -287,7 +296,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A951FE825EB192B00E207BC /* EpisodesViewController.swift in Sources */,
+				3A41881A25EC528400788829 /* APIManager.swift in Sources */,
 				3A41881725EC4FD400788829 /* APIEndpoint.swift in Sources */,
+				3A41882025EC52EA00788829 /* APIResponseErrorData.swift.swift in Sources */,
 				3ADD6A2825E71C000018344C /* CustomTextField.swift in Sources */,
 				3A41881325EC4A4C00788829 /* EpisodesResponse.swift in Sources */,
 				3ADD69D725E6C71D0018344C /* LoginViewController.swift in Sources */,
@@ -297,7 +308,8 @@
 				3ADD6A1525E6FF410018344C /* EpisodeDetailsViewController.swift in Sources */,
 				3ADD6A1825E6FF580018344C /* CharacterDetailsViewController.swift in Sources */,
 				3A8C2ACE25EB0E0F008C2042 /* Season.swift in Sources */,
-				3A41880E25EC3AA600788829 /* Service.swift in Sources */,
+				3A41880E25EC3AA600788829 /* APIService.swift in Sources */,
+				3A41881D25EC529100788829 /* APIError.swift in Sources */,
 				3ADD6A2C25E72D0A0018344C /* Account.swift in Sources */,
 				3A8C2AC525EA8AA8008C2042 /* String+Extension.swift in Sources */,
 				3A8C2AC125EA884C008C2042 /* AccountManager.swift in Sources */,
