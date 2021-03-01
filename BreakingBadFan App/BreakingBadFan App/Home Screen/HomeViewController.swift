@@ -37,6 +37,15 @@ class HomeViewController: MainViewController {
     @IBAction private func charactersButtonTapped(_ sender: UIButton) {
         print("🟢 charactersButtonDidTap")
         
+        apiManager.getCharacters { result in
+            switch result {
+            case .success(let episodes):
+//   TODO: Add real functionality here
+                print("🟢  Episodes didFetch: \(episodes)" )
+            case .failure(let error):
+                print("🔴 \(error)")
+            }
+        }
 
     }
     

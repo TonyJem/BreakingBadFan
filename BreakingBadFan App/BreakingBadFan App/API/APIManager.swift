@@ -34,5 +34,31 @@ extension APIManager {
             }
         }.resume()
     }
+    
+    func getCharacters(_ completion: @escaping (Result<[Character], APIError>) -> ()) {
+        guard let url = APIEndpoint.characters.url else {
+            completion(.failure(.failedURLCreation))
+            return
+        }
+
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        
+        session.dataTask(with: request) { data, response, error in
+            DispatchQueue.main.async {
+                if let data = data {
+                    do {
+                        let characters = try JSONDecoder().decode([Character].self, from: data)
+                        completion(.success(characters))
+                    } catch {
+                        completion(.failure(.unexpectedDataFormat))
+                    }
+                } else {
+                    completion(.failure(.failedRequest))
+                }
+            }
+        }.resume()
+    }
+    
 }
  
