@@ -14,8 +14,6 @@ enum APIEndpoint {
     }
 }
 
-// MARK: - Helpers
-
 private extension APIEndpoint {
 
     var BaseURL: String {

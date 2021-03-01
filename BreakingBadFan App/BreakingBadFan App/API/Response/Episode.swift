@@ -1,13 +1,5 @@
 import Foundation
 
-struct EpisodesResponse: Decodable {
-    let episodes: [Episode]
-    
-    enum CodingKeys: String, CodingKey {
-        case episodes
-    }
-}
-
 struct Episode: Codable {
     let id: Int
     let title: String
