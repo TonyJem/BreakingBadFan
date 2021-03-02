@@ -34,7 +34,7 @@ extension EpisodesViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return model.seasonBy(seasonNumber: String(section+1)).count
+        return model.seasonBy(seasonNumber: String(section + 1)).count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

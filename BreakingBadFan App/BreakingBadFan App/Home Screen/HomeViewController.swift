@@ -43,7 +43,6 @@ class HomeViewController: MainViewController {
     
     @IBAction private func quotesButtonTapped(_ sender: UIButton) {
         print("🟢 quotesButtonDidTap")
-        
     }
     
     @IBAction private func logoutButtonTapped(_ sender: UIButton) {
