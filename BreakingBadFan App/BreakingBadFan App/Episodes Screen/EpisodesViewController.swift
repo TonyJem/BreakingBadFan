@@ -4,13 +4,10 @@ class EpisodesViewController: UIViewController {
 
     @IBOutlet private var seasonsTableView: UITableView!
     
-    private let apiManager = APIManager()
-    private let model = SeasonModel()
+    private let model = Core.Seasons
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        fetchEpisodesToModel()
         
         seasonsTableView.dataSource = self
         seasonsTableView.tableFooterView = UIView()
@@ -18,21 +15,6 @@ class EpisodesViewController: UIViewController {
     
     @IBAction func filterButtonIsTapped(_ sender: UIBarButtonItem) {
         print("🟢 Filter button is tapped")
-    }
-    
-    private func fetchEpisodesToModel() {
-        apiManager.getEpisodes { result in
-            switch result {
-            case .success(let episodes):
-                print("🟢  Episodes didFetch")
-                self.model.episodes = episodes
-                
-                print("🟢🟢🟢 Season numbers \(self.model.seasonNumbers)")
-                
-            case .failure(let error):
-                print("🔴 \(error)")
-            }
-        }
     }
     
 }
@@ -52,7 +34,7 @@ extension EpisodesViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return model.seasonBy(seasonNumber: String(section)).count
+        return model.seasonBy(seasonNumber: String(section+1)).count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
