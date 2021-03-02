@@ -17,3 +17,7 @@ struct Account: Codable {
 struct Quote: Codable  {
     var text: String
 }
+
+
+
+
