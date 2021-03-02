@@ -54,13 +54,8 @@ class HomeViewController: MainViewController {
         apiManager.getEpisodes { result in
             switch result {
             case .success(let episodes):
-                print("🟢  Episodes didFetch")
                 self.model.episodes = episodes
-                
-                print("🟢🟢🟢 Season numbers \(self.model.seasonNumbers)")
-                
                 self.proceedEpisodesScene()
-                
             case .failure(let error):
                 print("🔴 \(error)")
             }
