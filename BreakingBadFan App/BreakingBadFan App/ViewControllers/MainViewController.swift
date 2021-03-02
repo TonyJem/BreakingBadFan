@@ -21,7 +21,6 @@ class MainViewController: UIViewController {
     private var EpisodesNavigationController: UINavigationController {
         EpisodesStoryboard.instantiateViewController(identifier: "Episodes")
     }
-
     
 }
 
